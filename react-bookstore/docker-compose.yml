@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  react-frontend:
+    build: ./react-frontend
+    image: hsiehmf/react-frontend
+    ports:
+      - '3000:3000'
+    links:
+      - react-rest-api
+  react-rest-api:
+    build: ./react-rest-api
+    image: hsiehmf/react-rest-api
+    ports:
+      - '3001:3001'
